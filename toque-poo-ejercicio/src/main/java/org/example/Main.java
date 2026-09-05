@@ -1,5 +1,5 @@
 package org.example;
-import java.util.Scanner;
+import java. util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -26,8 +26,8 @@ public class Main {
         System.out.print("Correo: ");
         String correoCajero = sc.nextLine();
         System.out.print("Contraseña: ");
-        String passCajero = sc.nextLine();
-        System.out.print("Sucursal: ");
+            String passCajero = sc.nextLine();
+            System.out.print("Sucursal: ");
         String sucursal = sc.nextLine();
 
         usuarios[1] = new Cajero(nombreCajero, correoCajero, passCajero, sucursal);
