@@ -1,7 +1,7 @@
 package org.example;
 
 public abstract class Usuario {
-    private String nombre;
+    protected String nombre;
     private String correo;
     private String password;
 
@@ -11,15 +11,16 @@ public abstract class Usuario {
         this.password = password;
     }
 
-    public String setCorreo(){
-        return correo;
-    }
-
     public void setCorreo(String correo) {
         if (!correo.contains("@")) {
             System.out.println("correo invalido");
+        } else {
+            this.correo = correo;
         }
-        this.correo = correo;
+    }
+
+    public String getCorreo() {
+        return correo;
     }
 
     public boolean verificaContrasena(String intento) {
