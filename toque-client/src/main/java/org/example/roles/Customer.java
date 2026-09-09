@@ -1,4 +1,7 @@
-package org.example;
+package org.example.roles;
+
+import org.example.model.Order;
+import org.example.model.User;
 
 /**
  * R2 Herencia: Customer extiende User.
@@ -21,7 +24,7 @@ public class Customer extends User {
         this.tableNumber = tableNumber;
     }
 
-    /** Confirma si la mesa es válida (regla con condicional). */
+    /** Confirma si la mesa es válida. */
     public boolean mesaValida() {
         if (tableNumber > 0 && tableNumber <= 50) {
             return true;

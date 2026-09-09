@@ -1,8 +1,7 @@
-package org.example;
+package org.example.model;
 
 /**
- * Clase de apoyo (no forma parte de la herencia polimórfica).
- * Modela el pedido y sus estados en el flujo Toque:
+ * Modela el pedido y sus estados
  * CREADA → PAGADA → EN_COCINA → LISTA → COMPLETADA
  */
 public class Order {
@@ -51,12 +50,12 @@ public class Order {
         this.status = status;
     }
 
-    /** Avanza el pedido al estado indicado. */
+    /** Avanza el pedido al estado siguiente. */
     public void advanceTo(String newStatus) {
         this.status = newStatus;
     }
 
-    /** Regla de negocio: ¿ya está pagado o más adelante en el flujo? */
+    /** Regla de negocio. */
     public boolean isPaid() {
         return status.equals("PAGADA")
                 || status.equals("EN_COCINA")

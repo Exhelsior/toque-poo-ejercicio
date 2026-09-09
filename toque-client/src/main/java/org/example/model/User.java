@@ -1,4 +1,4 @@
-package org.example;
+package org.example.model;
 
 /**
  * R1 Abstracción: clase abstracta padre (molde general del proyecto Toque).
@@ -37,7 +37,7 @@ public abstract class User {
     /** Indica si este rol puede actuar según el estado actual del pedido. */
     public abstract boolean canHandle(Order order);
 
-    /** Descripción corta de la acción del rol. */
+    /** Descripción acción del rol. */
     public abstract String describeAction();
 
     /** Monto que calcula o aporta este rol sobre el pedido. */
